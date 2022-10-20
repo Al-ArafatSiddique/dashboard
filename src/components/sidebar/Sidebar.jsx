@@ -1,6 +1,7 @@
 import React from 'react';
 import './sidebar.scss';
 import { AddShoppingCartSharp, Dashboard, Group, Inventory, LocalShipping, Logout, NotificationAdd, Person, Settings} from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 export default function sidebar() {
   return (
@@ -16,14 +17,14 @@ export default function sidebar() {
         <div className='center'>
           <ul>
             <p className="title">Main</p>
-            <li>
+            <Link to='/' className='link'>
               <Dashboard className='icon'/>
               <span>Dashboard</span>
-            </li>
-            <li>
+            </Link>
+            <Link to='/users' className='link'>
               <Group className='icon'/>
               <span>Users</span>
-            </li>
+            </Link>
             <li>
               <Inventory className='icon'/>
               <span>Products</span>
